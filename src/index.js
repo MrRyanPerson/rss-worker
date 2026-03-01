@@ -11,6 +11,6 @@ export default {
 		let abcSuccessful = abcResp.ok ? 'success' : 'fail';
 
 
-		console.log(`trigger fired at ${event.cron}: ${wasSuccessful}`);
+		console.log(`trigger fired at ${event.cron}: ${bbcSuccessful} , ${abcSuccessful}`);
 	},
 };
