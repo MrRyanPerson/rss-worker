@@ -12,8 +12,16 @@ export default {
 
 		console.log(`trigger fired at ${event.cron}: ${bbcFeed.title}, ${abcFeed.title}`);
 
-		await env.RSS_STORAGE.put(bbcFeed.title + ".json", JSON.stringify(bbcFeed.items));
-		await env.RSS_STORAGE.put(abcFeed.title + ".json", JSON.stringify(abcFeed.items));
+		// delete old feeds before putting new ones
+		await env.RSS_STORAGE.delete("bbcFeed" + ".json");
+		await env.RSS_STORAGE.delete("abcFeed" + ".json");
+
+		// put new feeds in storage
+		await env.RSS_STORAGE.put("bbcFeed" + ".json", JSON.stringify(bbcFeed.items));
+		await env.RSS_STORAGE.put("abcFeed" + ".json", JSON.stringify(abcFeed.items));
+
+		console.log("feeds updated in storage");
+
 
 	},
 };
