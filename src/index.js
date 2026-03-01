@@ -1,7 +1,5 @@
 let Parser = require('rss-parser');
 
-let Parser = require('rss-parser');
-
 let bbcRSS = "https://feeds.bbci.co.uk/news/world/rss.xml";
 let abcRSS = "https://abcnews.com/abcnews/topstories";
 
