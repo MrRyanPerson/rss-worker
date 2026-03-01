@@ -12,12 +12,12 @@
 	},
 	"triggers": {
 		"crons": [
-			"*/10 * * * *"
+			"*/5 * * * *"
 		]
 	},
 	"compatibility_flags": [
 		"nodejs_compat"
-	]
+	],
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
@@ -29,6 +29,14 @@
 	 * databases, object storage, AI inference, real-time communication and more.
 	 * https://developers.cloudflare.com/workers/runtime-apis/bindings/
 	 */
+	 
+	"r2_buckets": [
+		{
+		"binding": "RSS_STORAGE", // <~ valid JavaScript variable name
+		"bucket_name": "rss-storage"
+		}
+	]
+	
 	/**
 	 * Environment Variables
 	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables

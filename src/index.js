@@ -12,5 +12,7 @@ export default {
 
 
 		console.log(`trigger fired at ${event.cron}: ${bbcSuccessful} , ${abcSuccessful}`);
+
+		await env.RSS_STORAGE.put("test.txt", "test");
 	},
 };
