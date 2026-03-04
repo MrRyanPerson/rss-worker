@@ -4,6 +4,7 @@ let parser = new Parser({
   customFields: {
     item: [
       ['media:thumbnail', 'mediathumbnail'],
+      ['media:content', 'mediathumbnail'],
     ]
   }
 });
