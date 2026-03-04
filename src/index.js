@@ -16,7 +16,7 @@ export default {
 	async scheduled(event, env, ctx) {
 		let bbcFeed = await parser.parseURL(bbcRSS);
 		let abcFeed = await parser.parseURL(abcRSS);
-		let wsjRSS = await parser.parseURL(wsjRSS);
+		let wsjFeed = await parser.parseURL(wsjRSS);
 
 		console.log(`trigger fired at ${event.cron}: ${bbcFeed.title}, ${abcFeed.title}`);
 
